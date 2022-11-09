@@ -1,0 +1,65 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Nov  9 15:30:11 2022
+| Host         : DESKTOP-SDU4IM6 running 64-bit major release  (build 9200)
+| Command      : report_drc -file pingpong_drc_routed.rpt -pb pingpong_drc_routed.pb -rpx pingpong_drc_routed.rpx
+| Design       : pingpong
+| Device       : xc7z020clg484-3
+| Speed File   : -3
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 5
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 2          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| ZPS7-1      | Warning  | PS7 block required                                          | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net LED_reg3[7]_i_3_n_0 is a gated clock net sourced by a combinational pin LED_reg3[7]_i_3/O, cell LED_reg3[7]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net new_clk_2 is a gated clock net sourced by a combinational pin LED_reg2[7]_i_3/O, cell LED_reg2[7]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT LED_reg2[7]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+LED_reg2_reg[0], LED_reg2_reg[1], LED_reg2_reg[2], LED_reg2_reg[3], LED_reg2_reg[4], LED_reg2_reg[5], LED_reg2_reg[6], LED_reg2_reg[7]
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT LED_reg3[7]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+LED_reg3_reg[0], LED_reg3_reg[1], LED_reg3_reg[2], LED_reg3_reg[3], LED_reg3_reg[4], LED_reg3_reg[5], LED_reg3_reg[6], LED_reg3_reg[7]
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
