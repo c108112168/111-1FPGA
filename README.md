@@ -3,4 +3,4 @@
 期末報告:雙板pingpong、8bit資料傳輸
 影片:
 雙板pingpong 
-8bit資料傳輸<https://youtu.be/XhAaw__Bk>
+8bit資料傳輸<[https://youtu.be/XhAaw__Bk](https://www.youtube.com/watch?v=XhAaw__Bk0I)>
